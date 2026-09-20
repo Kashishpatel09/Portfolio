@@ -44,14 +44,14 @@ export default function ProjectCard({ project, onView }) {
           >
             <Github size={15} /> GitHub
           </a>
-          <a
+          {/* <a
             className="btn btn-ghost btn-sm"
             href={project.powerbiUrl}
             target="_blank"
             rel="noreferrer"
           >
             <BarChart3 size={15} /> Power BI
-          </a>
+          </a> */}
         </div>
       </div>
 

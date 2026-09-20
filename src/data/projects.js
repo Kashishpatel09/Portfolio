@@ -128,10 +128,8 @@ export const projects = [
   image: "/img/Hospital-Healthcare.png",
 
   githubUrl:
-    "https://github.com/kashish-patel/hospital-executive-analytics",
+    "https://github.com/Kashishpatel09/Hospital-Healthcare-Analytics-Power-bi",
 
-  powerbiUrl:
-    "https://app.powerbi.com/view?r=REPLACE_ME",
 },
   
   {
@@ -262,58 +260,79 @@ export const projects = [
   image: "/img/Food-Waste-Profit.png",
 
   githubUrl:
-    "https://github.com/kashish-patel/bakery-sales-waste-analytics",
+    "https://github.com/Kashishpatel09/Food-Waste-Profit-Opportunity-Power-Bi",
 
-  powerbiUrl:
-    "https://app.powerbi.com/view?r=REPLACE_ME",
+  // powerbiUrl:
+  //   "https://app.powerbi.com/view?r=REPLACE_ME",
 },
-// {
-//     id: "banking-loan-analytics",
-//     name: "Banking & Loan Analytics",
-//     tools: ["Power BI", "SQL", "DAX", "Power Query"],
-//     objective:
-//       "Analyze customer profiles, loans, repayments, interest income and loan performance.",
-//     kpis: [
-//       "Total Customers",
-//       "Total Loans",
-//       "Total Loan Amount",
-//       "Total Repayment",
-//       "Interest Income",
-//       "Average Loan Amount",
-//       "Outstanding Amount",
-//     ],
-//     analysis: [
-//       "Loan Distribution",
-//       "Customer Segmentation",
-//       "Loan Status",
-//       "Repayment Analysis",
-//       "Interest Income",
-//       "Regional Analysis",
-//       "Loan Performance",
-//     ],
-//     dataset:
-//       "Placeholder — describe the dataset here: source, number of rows, and the time period it covers.",
-//     dataCleaning:
-//       "Placeholder — summarize cleaning steps: standardizing loan status labels, correcting negative repayment values, deduplicating customer records.",
-//     dataTransformation:
-//       "Placeholder — describe transformations: calculating outstanding balance, bucketing customers by credit segment, deriving loan tenure.",
-//     dataModeling:
-//       "Placeholder — describe your schema: fact table (Loans) linked to dimension tables (Customers, Branches, Dates).",
-//     sqlAnalysis:
-//       "SELECT LoanStatus, COUNT(*) AS Total_Loans, SUM(OutstandingAmount) AS Outstanding\nFROM Loans\nGROUP BY LoanStatus\nORDER BY Outstanding DESC;",
-//     daxMeasures:
-//       "Interest Income = SUM(Loans[InterestPaid])\nOutstanding Amount = SUM(Loans[LoanAmount]) - SUM(Loans[RepaidAmount])\nAvg Loan Amount = AVERAGE(Loans[LoanAmount])",
-//     insights: [
-//       "Placeholder — e.g. A small share of customer segments carries a disproportionate share of outstanding balance.",
-//       "Placeholder — e.g. Repayment rates vary noticeably by region.",
-//     ],
-//     recommendations: [
-//       "Placeholder — e.g. Prioritize collections outreach on the segments with the highest outstanding-to-repayment ratio.",
-//     ],
-//     image: null, // TODO: add /src/assets/dashboard/banking-loan.png
-//     githubUrl: "https://github.com/kashish-patel/banking-loan-analytics", // TODO: replace
-//     powerbiUrl: "https://app.powerbi.com/view?r=REPLACE_ME", // TODO: replace
-//   },
+{
+  id: "banking-loan-analytics",
+  name: "Banking & Loan Analytics",
+  tools: ["Power BI", "SQL", "DAX", "Power Query", "Excel"],
+
+  objective:
+    "Analyze customer profiles, loans, repayments, interest income, outstanding balances and loan performance to understand overall banking and lending performance.",
+
+  kpis: [
+    "Total Customers",
+    "Total Loans",
+    "Total Loan Amount",
+    "Total Outstanding Amount",
+    "Total Repayment",
+    "Interest Income",
+    "Average Loan Amount",
+    "Approval Rate"
+  ],
+
+  analysis: [
+    "Banking Overview",
+    "Customer Analytics",
+    "Loan Analytics",
+    "Repayment & Risk Analysis",
+    "Branch Analysis",
+    "Loan Type Analysis"
+  ],
+
+  dataset:
+    "Banking and loan dataset containing 500 customers, 700 loan records and 20 branches. The dataset includes customer information, loan details, repayment data, branch information and loan type details.",
+
+  dataCleaning:
+    "Cleaned and prepared the banking dataset using Power Query by handling data types, standardizing categorical values, removing duplicate records where required, and preparing customer, loan, branch and repayment data for analysis.",
+
+  dataTransformation:
+    "Created calculated fields and transformed the data to analyze loan amounts, outstanding balances, repayment amounts, interest income, approval rate, customer segments, branches and loan types.",
+
+  dataModeling:
+    "Built a structured Power BI data model connecting customer, loan, branch, repayment and loan type information to support interactive banking and loan analysis.",
+
+  sqlAnalysis:
+    "SELECT LoanStatus, COUNT(*) AS Total_Loans, SUM(OutstandingAmount) AS Outstanding\nFROM Loans\nGROUP BY LoanStatus\nORDER BY Outstanding DESC;",
+
+  daxMeasures:
+    "Total Customers = DISTINCTCOUNT(Customers[CustomerID])\nTotal Loans = COUNTROWS(Loans)\nTotal Loan Amount = SUM(Loans[LoanAmount])\nTotal Repayment = SUM(Loans[RepaymentAmount])\nInterest Income = SUM(Loans[InterestIncome])\nOutstanding Amount = SUM(Loans[OutstandingAmount])\nAverage Loan Amount = AVERAGE(Loans[LoanAmount])",
+
+  insights: [
+    "The dashboard covers 500 customers and 700 loan records across 20 branches.",
+    "The total loan portfolio is approximately 912M, with approximately 543.79M outstanding.",
+    "Total repayment is approximately 619.39M, while interest income is approximately 26.50M.",
+    "Loan performance can be analyzed across customers, branches, loan types and repayment risk.",
+    "The dashboard provides separate views for customer analytics, loan analytics, repayment risk and branch performance."
+  ],
+
+  recommendations: [
+    "Monitor outstanding loan balances and repayment performance regularly.",
+    "Use branch and loan-type analysis to identify areas with higher outstanding balances.",
+    "Track late payments and repayment trends to support risk management.",
+    "Segment customers and loans to support more targeted banking decisions."
+  ],
+
+  image: "/img/Bank & loan.png",
+
+  githubUrl:
+    "https://github.com/Kashishpatel09/Banking-Loan-Analytics-PowerBI",
+
+  // powerbiUrl: "",
+},
 //   {
 //     id: "retail-sales-inventory-analytics",
 //     name: "Retail Sales & Inventory Analytics",
